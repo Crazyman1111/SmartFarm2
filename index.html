@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartFarm — Растения и регионы</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>SmartFarm — Растения и регионы</header>
+
+<main>
+
+  <!-- Начальный выбор -->
+  <div class="section" id="startSection">
+    <h2>Выберите, что хотите сделать</h2>
+    <div class="plants" style="justify-content:center;">
+      <div class="card" id="diseaseOption">Болезни растений</div>
+      <div class="card" id="regionOption">Выращивание по региону</div>
+    </div>
+  </div>
+
+  <!-- Диагностика болезней -->
+  <div id="diseaseSection" style="display:none">
+    <!-- Инструкция -->
+    <div class="section instruction">
+      <h2>Как пользоваться</h2>
+      <ol>
+        <li>Выберите растение.</li>
+        <li>Отметьте симптомы, которые вы заметили.</li>
+        <li>Нажмите кнопку <strong>Проверить болезни</strong>.</li>
+        <li>Посмотрите результаты с вероятностью и рекомендациями.</li>
+        <li>Чтобы начать заново, нажмите <strong>Начать заново</strong>.</li>
+      </ol>
+    </div>
+
+    <!-- Выбор растения -->
+    <div class="section" id="plantSection">
+      <h2>Выберите растение</h2>
+      <div class="plants" id="plants">
+        <div class="card" data-plant="картофель">Картофель</div>
+        <div class="card" data-plant="томат">Томат</div>
+        <div class="card" data-plant="пшеница">Пшеница</div>
+        <div class="card" data-plant="морковь">Морковь</div>
+        <div class="card" data-plant="огурец">Огурец</div>
+        <div class="card" data-plant="капуста">Капуста</div>
+        <div class="card" data-plant="яблоня">Яблоня</div>
+        <div class="card" data-plant="виноград">Виноград</div>
+        <div class="card" data-plant="лук">Лук</div>
+        <div class="card" data-plant="чеснок">Чеснок</div>
+      </div>
+    </div>
+
+    <!-- Выбор симптомов -->
+    <div class="section" id="symptomSection" style="display:none">
+      <h2>Выберите симптомы</h2>
+      <div class="symptoms" id="symptoms"></div>
+      <div class="center" style="margin-top:20px;">
+        <button id="checkBtn">Проверить болезни</button>
+      </div>
+    </div>
+
+    <!-- Результаты -->
+    <div class="section" id="resultSection" style="display:none">
+      <h2>Результаты</h2>
+      <div class="results" id="results"></div>
+      <div class="center" style="margin-top:20px;">
+        <button id="restartBtn">Начать заново</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Выбор региона -->
+  <div id="regionSection" style="display:none">
+    <div class="section" id="regionSelection">
+      <h2>Выберите регион</h2>
+      <div class="regions" id="regions">
+        <div class="card region" data-region="чуйская">Чуйская область</div>
+        <div class="card region" data-region="джалал-абадская">Джалал-Абадская область</div>
+        <div class="card region" data-region="иссык-кульская">Иссык-Кульская область</div>
+        <div class="card region" data-region="нарыньская">Нарыньская область</div>
+        <div class="card region" data-region="ошская">Ошская область</div>
+        <div class="card region" data-region="таласская">Таласская область</div>
+        <div class="card region" data-region="баткенская">Баткенская область</div>
+      </div>
+
+      <div class="section region-results" id="regionResults" style="display:none">
+        <h2>Результаты</h2>
+        <div id="regionPlants"></div>
+      </div>
+      <div class="center" style="margin-top:20px;">
+        <button id="regionRestartBtn">Назад</button>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
